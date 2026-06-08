@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>METAR MenuBar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A macOS menu-bar app that shows the current FAA flight category (VFR/MVFR/IFR/LIFR) for one or more airports.">
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, system-ui, sans-serif;
+         max-width: 38rem; margin: 3rem auto; padding: 0 1.5rem;
+         line-height: 1.55; color: #222; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #ddd; background: #1a1a1a; }
+    a { color: #6cb6ff; }
+    .disclaimer { background: #2a1a1a; border-color: #553030; }
+    code { background: #2a2a2a; }
+  }
+  h1 { margin-top: 0; font-size: 2rem; letter-spacing: -0.02em; }
+  .tag { color: #888; font-size: 1rem; margin-top: -0.5rem; }
+  h2 { margin-top: 2.5rem; font-size: 1.15rem; }
+  ul { padding-left: 1.2rem; }
+  li { margin: 0.35rem 0; }
+  code { font-family: ui-monospace, monospace; background: #f3f3f3;
+         padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+  .disclaimer { background: #fff8e6; border: 1px solid #e6cb88;
+                padding: 1rem 1.25rem; border-radius: 6px;
+                margin: 1.5rem 0; font-size: 0.95rem; }
+  .disclaimer strong { color: #a06800; }
+  footer { margin-top: 3rem; color: #888; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+
+<h1>METAR&nbsp;MenuBar</h1>
+<p class="tag">Color-coded FAA flight categories in your Mac menu bar.</p>
+
+<p>A small macOS app that shows the current flight category
+(<strong style="color:#13a13d">VFR</strong>,
+ <strong style="color:#1773dd">MVFR</strong>,
+ <strong style="color:#cf2025">IFR</strong>,
+ <strong style="color:#c520c5">LIFR</strong>) for one or more airports as
+a dot in your menu bar. Click for a fully-decoded METAR observation.</p>
+
+<div class="disclaimer">
+  <strong>⚠️ Not for navigation or flight planning.</strong> METAR MenuBar
+  is an informational convenience tool. It is not a substitute for an
+  official FAA preflight weather briefing. Always obtain a complete
+  briefing from an authorized source &mdash; Leidos Flight Service
+  (1-800-WX-BRIEF / <a href="https://www.1800wxbrief.com">1800wxbrief.com</a>)
+  or the FAA Aviation Weather Center
+  (<a href="https://aviationweather.gov">aviationweather.gov</a>) &mdash;
+  before every flight.
+</div>
+
+<h2>Get the app</h2>
+
+<ul>
+  <li>Mac App Store &mdash; <em>coming soon</em></li>
+  <li>Signed and Apple-notarized <a href="https://github.com/fizzsnob/metar-menubar/releases">DMG release on GitHub</a></li>
+</ul>
+
+<h2>Documents</h2>
+
+<ul>
+  <li><a href="privacy-policy.html">Privacy policy</a></li>
+</ul>
+
+<h2>Contact</h2>
+
+<p>Mike Bell &mdash; <a href="mailto:bell@mac.com">bell@mac.com</a></p>
+
+<footer>
+  © 2026 Mike Bell. All rights reserved.
+</footer>
+
+</body>
+</html>

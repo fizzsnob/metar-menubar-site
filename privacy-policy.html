@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>METAR MenuBar — Privacy Policy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; max-width: 36rem;
+         margin: 3rem auto; padding: 0 1.5rem; color: #222; line-height: 1.55; }
+  h1 { margin-top: 0; }
+  h2 { margin-top: 2.5rem; font-size: 1.1rem; }
+  code { font-family: ui-monospace, monospace; background: #f3f3f3;
+         padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+  footer { margin-top: 3rem; color: #888; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+
+<h1>METAR MenuBar — Privacy Policy</h1>
+
+<p><strong>Effective date:</strong> 2026.</p>
+
+<p>METAR MenuBar is a single-developer macOS menu-bar app that fetches
+publicly-available aviation weather (METAR) reports for one or more airports
+the user chooses. This document describes everything the app sends, stores,
+and reads — there is intentionally not much to it.</p>
+
+<h2>What we do not collect</h2>
+
+<ul>
+  <li>No accounts, sign-in, or user identifiers.</li>
+  <li>No analytics, telemetry, crash reporting, or advertising SDKs.</li>
+  <li>No location data — the app never asks for Location services permission.</li>
+  <li>No address book, photos, microphone, camera, or any other personal data.</li>
+</ul>
+
+<h2>Outbound network requests the app makes</h2>
+
+<ul>
+  <li><strong>aviationweather.gov</strong> — official US FAA Aviation Weather
+      Center. The app fetches the latest METAR report for each airport ICAO
+      identifier the user has added. Only the ICAO codes are sent. No identifier
+      that could be tied to the user is transmitted.</li>
+  <li><strong>davidmegginson.github.io</strong> — public CSV mirror of the
+      OurAirports dataset. Downloaded once and cached locally so the
+      "Add Airport" search box can match airports by name or city without
+      a network request per keystroke.</li>
+  <li><strong>Apple's geocoding service</strong> (via <code>CLGeocoder</code>) —
+      to look up the IANA timezone of an airport from its latitude/longitude,
+      so the menu can show the airport's local time. Apple's own privacy policy
+      governs this lookup.</li>
+</ul>
+
+<p>All requests use HTTPS. No personal information is included in any of
+them.</p>
+
+<h2>What the app stores on your Mac</h2>
+
+<ul>
+  <li>The list of airport ICAO codes you have added.</li>
+  <li>Which airport is currently selected.</li>
+  <li>Your chosen refresh interval (default 30 minutes).</li>
+  <li>A cached copy of the OurAirports CSV (in
+      <code>~/Library/Containers/&lt;bundle&gt;/Data/Library/Caches/</code> when
+      sandboxed), refreshed weekly or on demand.</li>
+  <li>Per-airport timezones the app has resolved (in memory only, for the
+      duration of a session).</li>
+</ul>
+
+<p>These are stored locally on your Mac. They are never transmitted to me or
+to any third party.</p>
+
+<h2>Children</h2>
+
+<p>The app is not directed at children. It does not collect any personal
+information from anyone, regardless of age.</p>
+
+<h2>Changes to this policy</h2>
+
+<p>Any future changes will appear on this page. Material changes will bump the
+<em>effective date</em> at the top.</p>
+
+<h2>Disclaimer (aviation use)</h2>
+
+<p><strong>Not for navigation or flight planning.</strong> METAR MenuBar is
+an informational convenience tool. It is <strong>not</strong> a substitute
+for an official FAA preflight weather briefing. Pilots must obtain a
+complete briefing from an authorized source &mdash; Leidos Flight Service
+(1-800-WX-BRIEF / <a href="https://www.1800wxbrief.com">1800wxbrief.com</a>)
+or the FAA Aviation Weather Center
+(<a href="https://aviationweather.gov">aviationweather.gov</a>) &mdash;
+before every flight. Do not use this app to make go/no-go decisions.</p>
+
+<p>The app is provided <em>as is</em>, without warranty of any kind,
+express or implied. The author makes no representation that the weather
+data displayed is current, complete, accurate, or free from errors,
+delays, or omissions, and assumes no liability for any use of this
+application. See the project README for the full disclaimer.</p>
+
+<h2>Contact</h2>
+
+<p>Mike Bell &mdash; <a href="mailto:bell@mac.com">bell@mac.com</a></p>
+
+<footer>
+  © 2026 Mike Bell. All rights reserved.
+</footer>
+</body>
+</html>
