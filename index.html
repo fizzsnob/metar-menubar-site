@@ -28,6 +28,33 @@
                 margin: 1.5rem 0; font-size: 0.95rem; }
   .disclaimer strong { color: #a06800; }
   footer { margin-top: 3rem; color: #888; font-size: 0.85rem; }
+  /* "Download on the Mac App Store" CTA — patterned after Apple's
+     badge but built with HTML/CSS so the page stays self-contained
+     (no external images) and respects dark/light color scheme. */
+  .downloads { margin: 1.5rem 0 0.5rem; }
+  .dl-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.6rem 1.1rem;
+    background: #000;
+    color: #fff !important;
+    border-radius: 10px;
+    text-decoration: none;
+    line-height: 1.0;
+    transition: background 0.15s, transform 0.1s;
+  }
+  .dl-button:hover { background: #1a1a1a; transform: translateY(-1px); }
+  .dl-icon { font-size: 1.8rem; line-height: 1; }
+  .dl-text { display: inline-flex; flex-direction: column; gap: 2px; }
+  .dl-small { font-size: 0.7rem; font-weight: 400; }
+  .dl-big { font-size: 1.15rem; font-weight: 600; letter-spacing: -0.01em; }
+  .dl-alt { font-size: 0.95rem; color: #666; margin: 1rem 0 0; }
+  @media (prefers-color-scheme: dark) {
+    .dl-button { background: #fff; color: #000 !important; }
+    .dl-button:hover { background: #e5e5e5; }
+    .dl-alt { color: #aaa; }
+  }
 </style>
 </head>
 <body>
@@ -55,10 +82,20 @@ a dot in your menu bar. Click for a fully-decoded METAR observation.</p>
 
 <h2>Get the app</h2>
 
-<ul>
-  <li>Mac App Store &mdash; <em>coming soon</em></li>
-  <li>Signed and Apple-notarized <a href="https://github.com/fizzsnob/metar-menubar/releases">DMG release on GitHub</a></li>
-</ul>
+<p class="downloads">
+  <a class="dl-button" href="https://apps.apple.com/us/app/metar-menubar/id6778100957">
+    <span class="dl-icon" aria-hidden="true"></span>
+    <span class="dl-text">
+      <span class="dl-small">Download on the</span>
+      <span class="dl-big">Mac&nbsp;App&nbsp;Store</span>
+    </span>
+  </a>
+</p>
+
+<p class="dl-alt">
+  Or grab a signed and Apple-notarized
+  <a href="https://github.com/fizzsnob/metar-menubar/releases">DMG release on GitHub</a>.
+</p>
 
 <h2>Documents</h2>
 
